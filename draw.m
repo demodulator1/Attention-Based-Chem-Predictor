@@ -1,6 +1,6 @@
-file_name=["Attention","RBF","BP"];
+file_name=["Attention","RBF","BP","RBF_ANN"];
 file_name_tail="_loss_history.txt";
-choose=3;
+choose=1;
 
 %% 画图
 
@@ -40,5 +40,7 @@ set(gcf, 'Color', 'w');
 
 
 % 导出图片
-exportgraphics(gcf, strcat('output/', file_name(choose), '_loss_plot.png'), 'Resolution', 300);
+set(gca, 'FontName', 'Times New Roman', 'FontSize', 12, 'LineWidth', 1);
+
+exportgraphics(gcf, strcat('output/', file_name(choose), '_loss_plot.png'), 'Resolution', 1000);
 
